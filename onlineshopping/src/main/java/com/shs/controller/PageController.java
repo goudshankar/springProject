@@ -9,6 +9,8 @@ public class PageController {
 	@RequestMapping(value= {"/","/index","/home"})
 	public ModelAndView index() {
 		ModelAndView mv=new ModelAndView("page");
+		//add model object
+		mv.addObject("greetings","welcome to onlineshopping");
 		return mv;
 	}
 }
