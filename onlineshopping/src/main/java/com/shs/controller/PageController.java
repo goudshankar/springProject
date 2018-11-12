@@ -10,7 +10,26 @@ public class PageController {
 	public ModelAndView index() {
 		ModelAndView mv=new ModelAndView("page");
 		//add model object
-		mv.addObject("greetings","welcome to onlineshopping");
+		mv.addObject("title","Home");
+		mv.addObject("userClickHome",true);
+		return mv;
+	}
+	
+	@RequestMapping(value= "/about")
+	public ModelAndView about() {
+		ModelAndView mv=new ModelAndView("page");
+		//add model object
+		mv.addObject("title","AboutUs");
+		mv.addObject("userClickAbout",true);
+		return mv;
+	}
+				
+	@RequestMapping(value="/contact")
+	public ModelAndView contact() {
+		ModelAndView mv=new ModelAndView("page");
+		//add model object
+		mv.addObject("title","Contact Us");
+		mv.addObject("userClickContact",true);
 		return mv;
 	}
 }
